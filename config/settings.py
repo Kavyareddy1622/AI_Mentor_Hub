@@ -1,16 +1,16 @@
 import os
-from dotenv import load_dotenv
+import streamlit as st
 
-load_dotenv()
+try:
+    from dotenv import load_dotenv
+    load_dotenv()
+except ImportError:
+    pass
 
-GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
+# Try Streamlit Secrets first, then .env
+GEMINI_API_KEY = st.secrets.get("GEMINI_API_KEY", os.getenv("GEMINI_API_KEY"))
 
 if not GEMINI_API_KEY:
     raise ValueError(
-        "GEMINI_API_KEY not found. Please check your .env file."
+        "GEMINI_API_KEY not found. Add it to Streamlit Secrets or .env"
     )
-    MODEL_NAME = "gemini-2.5-flash"
-    response = self.client.models.generate_content(
-    model=MODEL_NAME,
-    contents=prompt,
-)

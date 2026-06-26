@@ -1,0 +1,23 @@
+AI_Mentor_Hub/
+│
+├── app.py
+├── requirements.txt
+├── README.md
+├── .gitignore
+├── .env
+│
+├── assets/
+│
+├── config/
+│
+├── database/
+│
+├── modules/
+│
+├── prompts/
+│
+├── uploads/
+│
+├── outputs/
+│
+└── utils/

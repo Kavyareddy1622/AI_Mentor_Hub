@@ -1,5 +1,16 @@
 import streamlit as st
-from modules import home
+from modules import (
+    home,
+    ai_chat,
+    resume,
+    interview,
+    study,
+    career,
+    linkedin,
+    dashboard,
+    rag_chat
+    
+)
 
 # ---------------------------
 # Page Configuration
@@ -37,9 +48,13 @@ page = st.sidebar.radio(
         "🚀 Career Advisor",
         "✍ LinkedIn Generator",
         "📊 Student Dashboard",
+        "📚 Document Chat (RAG)"
     ],
 )
 
+# ---------------------------
+# Routing
+# ---------------------------
 # ---------------------------
 # Routing
 # ---------------------------
@@ -47,6 +62,42 @@ page = st.sidebar.radio(
 if page == "🏠 Home":
     home.show()
 
-else:
-    st.title(page)
-    st.info("🚧 This module will be developed in upcoming phases.")
+elif page == "💬 AI Chat":
+    ai_chat.show()
+elif page == "📄 Resume Analyzer":
+    resume.show()
+elif page == "🎤 Interview Coach":
+    interview.show()
+elif page == "📚 Study Mentor":
+    study.show()
+elif page == "🚀 Career Advisor":
+    career.show()
+elif page == "✍ LinkedIn Generator":
+    linkedin.show()
+elif page == "📊 Student Dashboard":
+    dashboard.show()
+elif page == "📚 Document Chat (RAG)":
+    rag_chat.show()
+elif page == "📄 Resume Analyzer":
+    st.title("📄 Resume Analyzer")
+    st.info("🚧 Coming Soon")
+
+elif page == "🎤 Interview Coach":
+    st.title("🎤 Interview Coach")
+    st.info("🚧 Coming Soon")
+
+elif page == "📚 Study Mentor":
+    st.title("📚 Study Mentor")
+    st.info("🚧 Coming Soon")
+
+elif page == "🚀 Career Advisor":
+    st.title("🚀 Career Advisor")
+    st.info("🚧 Coming Soon")
+
+elif page == "✍ LinkedIn Generator":
+    st.title("✍ LinkedIn Generator")
+    st.info("🚧 Coming Soon")
+
+elif page == "📊 Student Dashboard":
+    st.title("📊 Student Dashboard")
+    st.info("🚧 Coming Soon")

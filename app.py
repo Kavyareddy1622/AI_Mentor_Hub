@@ -7,8 +7,7 @@ from modules import (
     study,
     career,
     linkedin,
-    dashboard,
-    rag_chat
+    dashboard
     
 )
 
@@ -48,7 +47,7 @@ page = st.sidebar.radio(
         "🚀 Career Advisor",
         "✍ LinkedIn Generator",
         "📊 Student Dashboard",
-        "📚 Document Chat (RAG)"
+        
     ],
 )
 
@@ -76,8 +75,7 @@ elif page == "✍ LinkedIn Generator":
     linkedin.show()
 elif page == "📊 Student Dashboard":
     dashboard.show()
-elif page == "📚 Document Chat (RAG)":
-    rag_chat.show()
+
 elif page == "📄 Resume Analyzer":
     st.title("📄 Resume Analyzer")
     st.info("🚧 Coming Soon")
